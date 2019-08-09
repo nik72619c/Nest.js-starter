@@ -8,7 +8,6 @@ export class AppService {
   constructor(@Inject('USERS') private readonly user: typeof User) {
 
   }
-
   static async createUser() {
     return await User.create({
       userId: 1,
@@ -20,7 +19,7 @@ export class AppService {
         },
       ],
     }, {
-      include: [ Book],
+      include: [Book],
     });
   }
 
